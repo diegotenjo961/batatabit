@@ -1,0 +1,19 @@
+{
+  "name": "batatabit",
+  "version": "1.0.0",
+  "description": "Batatabit helps you to navigate between differents prices and tends.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diegotenjo961/batatabit.git"
+  },
+  "author": "diegotenjo961",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/diegotenjo961/batatabit/issues"
+  },
+  "homepage": "https://github.com/diegotenjo961/batatabit#readme"
+}
