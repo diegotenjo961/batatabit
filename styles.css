@@ -139,16 +139,45 @@ main {
 }
 
 .main__table--container {
-	overflow-x: scroll;
+	position: relative;
+	display: flex;
+	overflow-x: hidden;
+	scroll-snap-type: x proximity;
+  overflow-behavior-x: contain;
+	overflow-y: hidden;
 }
-
+.main__table--container::-webkit-scrollbar {
+  background-color: transparent;
+}
+.main__table--container .arrow {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	top: calc(50% - 20px);
+	left: 81%;
+	background-image: url('./assets/icons/right-arrow.svg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	opacity: 0.8;
+}
+.main__table--container .rotate {
+	transform: rotate(180deg);
+}
 .main__currency-table {
+	scroll-snap-align: center;
   width: 70%;
 	min-width: 288px;
 	max-width: 500px;
 	height: 360px;
 	margin: 0 auto;
 	font-family: 'Inter', sans-serif;
+}
+.main__currency-table:first-child {
+	margin-left: 14px;
+}
+.main__currency-table:last-child {
+	margin-right: 14px;
 }
 
 .main__currency-table .currency-table--title {
@@ -444,6 +473,13 @@ main {
 	border-radius: 15px;
 	box-shadow: 0 4px 8px rgba(89, 73, 30, 0.16);
 }
+.plans-container--card:first-child {
+	margin-left: 30px;
+}
+.plans-container--card:last-child {
+	margin-right: 30px;
+}
+
 .plans-container--card .recommended {
 	position: absolute;
 	width: 120px;

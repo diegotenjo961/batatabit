@@ -1,5 +1,19 @@
-const plansContainer = document.querySelector('.plans-container--slider');
+const $ = (selector) => document.querySelector(selector);
 
-const scrollContainer = plansContainer.scrollWidth / 4;
+const tablesContainer = $('.main__table--container');
+const arrowButton = $('#tables-arrow');
+arrowButton.addEventListener('click', () => {
+	const isRight = arrowButton.classList.toggle('rotate');
+	let scrollTables;
+	if(!isRight) scrollTables = 0;
+	else scrollTables = tablesContainer.scrollWidth;
+	console.log(scrollTables);
+	tablesContainer.scrollTo({
+		left: scrollTables,
+		behavior: 'smooth'
+	});
+});
 
-plansContainer.scrollTo(scrollContainer, 0);
+const plansContainer = $('.plans-container--slider');
+const scrollPlans= plansContainer.scrollWidth / 4;
+plansContainer.scrollTo(scrollPlans, 0);

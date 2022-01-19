@@ -7,3 +7,7 @@
 .plans-container--slider {
 	justify-content: center;
 }
+
+.arrow {
+	display: none;
+}
